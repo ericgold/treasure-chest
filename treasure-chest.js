@@ -90,15 +90,17 @@
 //madArguments
 	exports.madArguments = function() {
 		var numbers = [];
+		var others = [];
 		for (var i = 0; i<arguments.length; i++) {
 			if (typeof arguments[i] === "number") {
-				var sqrt = Math.sqrt(arguments[i]);
-				numbers.push(sqrt);
+				//var sqrt = Math.sqrt(arguments[i]);
+				numbers.push(Math.sqrt(arguments[i]));
 			} else {
-				console.log(arguments[i]);
+				others.push(arguments[i]);
 			}
 		}
 		return numbers;
+		return others;
 	};
 
 //checkArray
@@ -199,6 +201,21 @@
 
 
 // ******* TESTS *************************************
+
+console.log(treasureChest.min(10, 100));
+console.log(treasureChest.countChar("MISSISSIPPI", "S"));
 console.log(treasureChest.gameBoard(8,8));
+console.log(treasureChest.isPrime(97));
+console.log(treasureChest.betterRange(0, 100, 10));
+console.log(treasureChest.reverseArray([1,2,3,4,5]));
+console.log(treasureChest.madArguments("Bill", 4, 76, true));
+treasureChest.checkArray([1,2,4], 3);
+treasureChest.checkArray([1,2,5], 5);
+
+treasureChest.readNotRead();
+
+var bus4 = new treasureChest.Vehicle("bus", 4, 133, 200, 12, false, 3204, -2);
+console.log(bus4.id);
+
 
 
