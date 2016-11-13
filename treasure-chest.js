@@ -20,7 +20,7 @@
 		} else {
 			return false;
 		}
-	}
+	};
 
 //countChar
 	exports.countChar = function(string, char) {
@@ -31,7 +31,7 @@
 			}
 		}
 		return chars;
-	}
+	};
 
 //board
 	exports.gameBoard = function(horizontal, vertical) {
@@ -41,7 +41,7 @@
 
 		for (var y = 0; y < sizeY; y++) {
 			for (var x = 0; x < sizeX; x++) {
-				if ((x+y) % 2 == 0)
+				if ((x+y) % 2 === 0)
 					board += " ";
 				else
 					board += "#";
@@ -57,7 +57,7 @@
 			} 
 		}
 		return number > 1;
-	}
+	};
 
 //betterRange
 	exports.betterRange = function(start, end, step) {
@@ -69,12 +69,12 @@
 				rangeArray.push(i);
 			}
 		} else {
-			for (var i = start; i <= end; i+=step) {
-				rangeArray.push(i);
+			for (var j = start; j <= end; j+=step) {
+				rangeArray.push(j);
 			}
 		}
 		return rangeArray;
-	}
+	};
 
 //reverseArray 
 	exports.reverseArray = function(array) {
@@ -83,7 +83,7 @@
 			output.push(array[i]);
 		}
 		return output;
-	}
+	};
 
 //madArguments
 	exports.madArguments = function() {
@@ -97,7 +97,7 @@
 			}
 		}
 		return numbers;
-	}
+	};
 
 //checkArray
 	exports.checkArray = function(array) {
@@ -108,7 +108,7 @@
 				console.log(arguments[i] + " is in the array");
 			}
 		}
-	}
+	};
 
 //readNotRead
 	exports.readNotRead = function() {
@@ -127,7 +127,7 @@
 				author: "Renata Adler",
 				title: "Speedboat",
 				readingStatus: true
-		}
+			}
 		];
 		for (var i = 0; i < library.length; i++) {
 			if (library[i].readingStatus === true) {
@@ -149,17 +149,17 @@
 		this.full = full;
 		this.id = id;
 		this.scheduleStatus = scheduleStatus;
-	}
+	};
 
 	exports.Vehicle.prototype.reportLocation = function() {
 		console.log(this.type + " " + this.line + " " + this.location.city);
 		console.log(this.latitude + " " + this.longitude);
-	}
+	};
 
 	exports.Vehicle.prototype.moveTo = function(newLat, newLon) {
 		this.latitude = newLat;
 		this.longitude = newLon;
-	}
+	};
 
 // ******* SUB-MODULES *******************************
 
@@ -193,7 +193,7 @@
 
 
 
-}(typeof window === 'undefined' || window === null ? global.treasureChest = {} : window.treasureChest = {});
+})(typeof window === 'undefined' || window === null ? global.treasureChest = {} : window.treasureChest = {});
 
 
 // ******* TESTS *************************************
