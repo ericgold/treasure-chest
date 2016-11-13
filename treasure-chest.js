@@ -168,33 +168,36 @@
 // ******* SUB-MODULES *******************************
 
 //month-names
-/*
-(function(exports) {
-	var months = [
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-		"August",
-		"September",
-		"October",
-		"November",
-		"December"
-	];
 
-	exports.name = function(number) {
-		return months[number];
-	};
-	exports.number = function(name) {
-		return months.indexOf(name);
-	};
+	(function(exports) {
+		var months = [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+		];
 
-}(typeof window === 'undefined' || window === null ? global.month = {} : window.month = {});
-*/
+		exports.name = function(number) {
+			return months[number];
+		};
+		exports.number = function(name) {
+			return months.indexOf(name);
+		};
 
+
+
+	}(exports.month = {}));
+	//console.log(this.month);
+
+	//exports.month = this.month;
 
 
 }(typeof window === 'undefined' || window === null ? global.treasureChest = {} : window.treasureChest = {}))
@@ -217,5 +220,6 @@ treasureChest.readNotRead();
 var bus4 = new treasureChest.Vehicle("bus", 4, 133, 200, 12, false, 3204, -2);
 console.log(bus4.id);
 
-
+console.log(treasureChest.month.name(2));
+console.log(treasureChest.month.number("July"));
 
