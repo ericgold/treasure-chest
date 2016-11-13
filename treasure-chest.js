@@ -46,8 +46,9 @@
 				else
 					board += "#";
 			}
+			board += "\n";
 		}
-		board += "\n";
+		return board;	
 	}
 
 //isPrime
