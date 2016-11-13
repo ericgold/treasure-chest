@@ -45,6 +45,7 @@
 					board += " ";
 				else
 					board += "#";
+			}
 		}
 		board += "\n";
 	}
@@ -193,10 +194,10 @@
 
 
 
-})(typeof window === 'undefined' || window === null ? global.treasureChest = {} : window.treasureChest = {});
+}(typeof window === 'undefined' || window === null ? global.treasureChest = {} : window.treasureChest = {}))
 
 
 // ******* TESTS *************************************
-treasureChest.gameBoard(8,8);
+console.log(treasureChest.gameBoard(8,8));
 
 
